@@ -5,6 +5,8 @@ Arduino and Android classes to easily connect your mobile device with an Arduino
 With the example bellow, we can send a message to Android using Arduino.
 Read more here: http://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/
 
+I had tested this lib with BC417 module, but I believe that this class works with major part of modules, because all of them use the same protocol. If you test other module, working or not, please, just start a new issue here to help me. If you have any problem, start an issue here too that I will try to help you.
+
 
 Android Example (Using Processing)
 ==================================
