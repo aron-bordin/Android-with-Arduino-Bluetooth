@@ -3,6 +3,8 @@ Android with Arduino - Bluetooth
 
 Arduino and Android classes to easily connect your mobile device with an Arduino board.
 With the example bellow, we can send a message to Android using Arduino.
+Read more here: http://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/
+
 
 Android Example (Using Processing)
 ==================================
