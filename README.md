@@ -2,6 +2,55 @@ Android with Arduino - Bluetooth
 ================================
 
 Arduino and Android classes to easily connect your mobile device with an Arduino board.
+With the example bellow, we can send a message to Android using Arduino.
+
+Android Example (Using Processing)
+==================================
+
+		import com.aronbordin.*;
+
+		/*make sure to use the same name of the robot. 
+		And check if it's paired with your device */
+		BluetoothArduino mBlue = BluetoothArduino.getInstance("ExampleRobot");
+
+		void setup(){
+		  mBlue.Connect();  
+		  textSize(30);
+		}
+
+		void draw(){
+		  background(0);
+		  String msg = mBlue.getLastMessage();
+		  text(msg, 100, 100);  
+		  
+		}
+
+Arduino Example
+===============
+
+		#include <SoftwareSerial.h>
+		#include "bluetooth.h"
+
+		Bluetooth *blue = new Bluetooth("ExampleRobot");
+
+
+		void setup(){
+			Serial.begin(9600);
+			blue->setupBluetooth();	
+		}
+
+
+		void loop(){
+			String msg = blue->Read();
+			if(msg.length() > 1){
+				Serial.print("Received: ");
+				Serial.println(msg);
+			}
+			if(Serial.available()){
+
+				blue->Send("Example message#");
+			}
+		}
 
 
 Arduino class reference
