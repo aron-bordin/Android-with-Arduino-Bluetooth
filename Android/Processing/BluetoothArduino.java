@@ -1,4 +1,4 @@
-package com.aronbordin.recuebicaro;
+package com.aronbordin;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

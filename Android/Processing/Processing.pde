@@ -1,8 +1,8 @@
-import com.aronbordin.recuebicaro.*;
+import com.aronbordin.*;
 
 /*make sure to use the same name of the robot. 
 And check if it's paired with your device */
-BluetoothArduino mBlue = BluetoothArduino.getInstance("ExempleRobot");
+BluetoothArduino mBlue = BluetoothArduino.getInstance("ExampleRobot");
 
 void setup(){
   mBlue.Connect();  
