@@ -28,6 +28,7 @@ public class BluetoothArduino extends Thread {
     private String robotName;
     private List<String> mMessages = new ArrayList<String>();
     private String TAG = "BluetoothConnector";
+    private char DELIMITER = '#';
 
     private static BluetoothArduino __blue = null;
 
@@ -116,7 +117,7 @@ public class BluetoothArduino extends Thread {
                     int i = 0;
 
                     String s = "";
-                    while((ch=(byte)mIn.read()) != '\0'){
+                    while((ch=(byte)mIn.read()) != DELIMITER){
                         buffer[i++] = ch;
                     }
                     buffer[i] = '\0';
@@ -136,9 +137,7 @@ public class BluetoothArduino extends Thread {
     private void MessageReceived(String msg){
         try {
 
-            int id = Integer.valueOf(msg.split("@")[0]);
-            mMessages.set(id, msg);
-
+            mMessages.add(msg);
             try {
                 this.notify();
             }catch (IllegalMonitorStateException e){
