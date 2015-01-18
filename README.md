@@ -104,7 +104,7 @@ By default is '#', but you can chage it with setDelimiter(char d);
 **BluetoothArduino getInstance(String n);**
 Get/Create a Bluetooth instance with the robot name. The name provided will be used in the connection
 
-**boolena isBluetoothEnabled();**
+**boolean isBluetoothEnabled();**
 Check if the device bluetooth is enabled
 
 **boolean Connect();**
